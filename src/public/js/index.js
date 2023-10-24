@@ -25,13 +25,6 @@ socketClient.on("productCreated", (product) => {
         </tr>`;
   table.innerHTML += row;
 });
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("delete-button")) {
-    e.preventDefault();
-    const productId = e.target.getAttribute("data-product-id");
-    socketClient.emit("deleteProduct", productId);
-  }
-});
 
 socketClient.on("updateProducts", (product) => {
   table.innerHTML = "";

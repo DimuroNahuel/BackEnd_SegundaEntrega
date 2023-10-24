@@ -4,5 +4,5 @@ const URI =
 
 mongoose
   .connect(URI)
-  .then(() => console.log("conectado a bd"))
+  .then(() => console.log("conexion establecida en bd"))
   .catch((error) => console.log(error));
